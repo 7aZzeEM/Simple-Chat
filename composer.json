@@ -1,0 +1,12 @@
+{
+    "name": "valerian/chat-app",
+    "description": "Simple Chat App With (Advanced Code)",
+    "autoload": {
+        "psr-4": {
+            "Valerian\\ChatApp\\Server\\": "server/"
+        }
+    },
+    "require": {
+        "phpmailer/phpmailer": "^7.0"
+    }
+}

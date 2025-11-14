@@ -1,0 +1,221 @@
+$bg-container: rgba(255, 255, 255, 0.1);
+
+.chat-wrapper {
+    width: 100%;
+    max-width: 900px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: $bg-container;
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  /* شريط العنوان */
+  header {
+    padding: 1.2rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+  }
+
+  .user-info {
+    flex: 1;
+  }
+
+  .user-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .user-status {
+    font-size: 0.85rem;
+    opacity: 0.8;
+  }
+
+  /* منطقة الدردشة */
+  .chat-container {
+    flex: 1;
+    padding: 1.5rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.3) transparent;
+  }
+
+  .chat-container::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .chat-container::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .chat-container::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+  }
+
+  /* فقاعات الرسائل */
+  .message {
+    max-width: 75%;
+    padding: 0.9rem 1.2rem;
+    border-radius: 18px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  .sent {
+    background: rgba(255, 255, 255, 0.15);
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+  }
+
+  .received {
+    background: rgba(255, 255, 255, 0.25);
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+  }
+
+  .message-time {
+    font-size: 0.7rem;
+    margin-top: 0.4rem;
+    opacity: 0.7;
+    text-align: left;
+  }
+
+  /* منطقة الإدخال */
+  .input-area {
+    display: flex;
+    padding: 1.2rem;
+    gap: 0.8rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .input-area input {
+    flex: 1;
+    padding: 0.9rem 1.4rem;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    caret-color: white;
+  }
+
+  .input-area input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .input-area button {
+    background: rgba(255, 255, 255, 0.25);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+
+  .input-area button:hover {
+    background: rgba(255, 255, 255, 0.35);
+  }
+
+  /* متجاوب */
+  @media (max-width: 600px) {
+    .chat-wrapper {
+      border-radius: 16px;
+    }
+    
+    .message {
+      max-width: 85%;
+    }
+    
+    header {
+      padding: 1rem;
+    }
+  }
+
+  .alert {
+    position: absolute;
+    background-color: #102353;
+    width: 380px;
+    height: 150px;
+    border-radius: 20px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 600px) {
+    .alert {
+      max-width: 350px;
+    }
+  }
+
+  .alert a {
+    color: #c62121;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .username {
+    position: absolute;
+    font-size: 10px;
+    top: -16px;
+    right: 0;
+    color: #d8d8d8;
+  }
+
+  .onlines {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-top: 4px;
+    color: #a0d8a0;
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logout-btn {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background 0.2s;
+  }
+
+  .logout-btn:hover {
+      background: rgba(255, 50, 50, 0.2);
+  }

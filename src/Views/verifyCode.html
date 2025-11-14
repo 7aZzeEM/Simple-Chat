@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="CSS/form.css">
+<div class="landing-container">
+    <div class="logo">🔒</div>
+    <h1 class="title-header">Enter Verification Code</h1>
+    <p class="paragraph-title">We've sent a 6-digit code to your email.</p>
+
+    <form id="verifyForm" class="form-group">
+        <input type="text" id="codeInput" maxlength="6" placeholder="••••••" autocomplete="off" required />
+        <button type="submit">Verify</button>
+    </form>
+
+    <div class="login-link">
+        Didn't receive the code? <a id="Resend">Resend</a>
+    </div>
+</div>
+<div class="alert">
+    <h1 id="messageAlert">Message</h1>
+    <a id="closeAlert">×</a>
+</div>
+<script type="module" src="JS/Verify.js"></script>

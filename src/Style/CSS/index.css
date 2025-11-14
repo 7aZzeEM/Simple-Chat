@@ -1,0 +1,17 @@
+.buttons {
+  display: flex;
+  gap: 10px; }
+
+a {
+  background-color: #ffffff;
+  color: #2575fc;
+  border: none;
+  border-radius: 12px;
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%; }
+
+a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); }

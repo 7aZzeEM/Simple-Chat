@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="CSS/chat.css">
+<div class="chat-wrapper">
+    <header>
+        <div class="user-info">
+            <div class="user-name" id="userName"></div>
+            <div class="user-status">Online</div>
+            <span class="onlines" style="display: none;"></span>
+        </div>
+        <div class="header-actions">
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+            <div class="avatar">👤</div>
+        </div>
+    </header>
+
+    <div class="chat-container" id="chatBox"></div>
+    
+    <div class="input-area">
+        <input type="text" id="messageInput" placeholder="Type your message..." maxlength="500" />
+        <button id="sendButton">➤</button>
+    </div>
+    
+    <div class="alert">
+        <h1 id="messageAlert"></h1>
+        <a id="closeAlert">×</a>
+    </div>
+</div>
+<script type="module" src="JS/Chat.js"></script>

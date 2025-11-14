@@ -1,0 +1,21 @@
+// this style for forms in login and register page
+$bg-color: #fff;
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 1.2rem;
+    font-size: 0.95rem;
+}
+
+.login-link a {
+    color: $bg-color;
+}
+
+.login-link a:hover {
+    opacity: 0.8;
+}

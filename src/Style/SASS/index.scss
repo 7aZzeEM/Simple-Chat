@@ -1,0 +1,26 @@
+// basic color => this variables in main.scss but when write @use 'main' return error
+$bg-button: #ffffff;
+$button-color: #2575fc;
+
+// div buttons class (a element) in index page to go login and register
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+// a element in index page different in login and register
+a {
+    background-color: $bg-button;
+    color: $button-color;
+    border: none;
+    border-radius: 12px;
+    padding: 0.9rem 2rem;
+    font-size: 1.1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+}
+
+a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}

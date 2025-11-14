@@ -1,0 +1,148 @@
+// basic variables to colors text and background
+$bg-body: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+$main-color: white;
+$bg-container: rgba(255, 255, 255, 0.1);
+$bg-input: rgba(255, 255, 255, 0.9);
+$input-placeholder-color: #777;
+$bg-button: #ffffff;
+$button-color: #2575fc;
+
+// basic style for any application (without font-family)
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+// body style will be used in every page
+body {
+    background: $bg-body;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    color: $main-color;
+}
+
+// style app logo
+.logo {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+// landing container for index, login and register page
+.landing-container {
+    max-width: 500px;
+    width: 100%;
+    background: $bg-container;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    color: $main-color;
+}
+
+// for header in index, login and register page
+.title-header {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+// for paragraph in index, login and register page
+.paragraph-title {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 1.8rem;
+}
+
+// for links in index, login and register page
+a {
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+// for form element in login and register page
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+// for inputs element in login and register page
+input {
+    width: 100%;
+    padding: .9rem;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    font-size: 1rem;
+    background: $bg-input;
+}
+
+input::placeholder {
+    color: $input-placeholder-color;
+}
+
+// for button elements in index, login and register page
+button {
+    background-color: $bg-button;
+    color: $button-color;
+    border: none;
+    border-radius: 12px;
+    padding: 0.95rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 0.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+// media body for mobile media for responsive design
+@media (max-width: 600px) {
+    body {
+      height: calc(100vh - 55px);
+    }
+}
+
+// media landing, header and class a element for mobile media
+@media (max-width: 480px) {
+    .landing-container {
+      padding: 1.8rem;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+    }
+    .buttons {
+      flex-direction: column;
+    }
+}
+
+// style alert code alias normal alert in JS
+.alert {
+    position: absolute;
+    background-color: #102353;
+    width: 450px;
+    height: 200px;
+    border-radius: 20px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    a {
+        color: #c62121;
+        font-size: 20px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
